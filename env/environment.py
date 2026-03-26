@@ -193,6 +193,6 @@ class EmailTriageEnvironment:
         timed_out = self._steps >= self._max_steps
         if closed or timed_out:
             self._done = True
-            self._score = score_task(self._task, self._state)
+            self._score = round(score_task(self._task, self._state), 4)
             self._total_reward += self._score
         return self._done

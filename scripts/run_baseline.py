@@ -13,8 +13,7 @@ def _ensure_openai_api() -> None:
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise RuntimeError("OPENAI_API_KEY is required for baseline run")
-    client = OpenAI(api_key=api_key)
-    client.models.list(limit=1)
+    OpenAI(api_key=api_key)
 
 
 def _deterministic_policy(task_key: str) -> list[dict]:
