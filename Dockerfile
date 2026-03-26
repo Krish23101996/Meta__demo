@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app
 
-CMD ["python", "scripts/run_baseline.py"]
+CMD ["python", "-c", "from env.environment import EmailTriageEnvironment; e=EmailTriageEnvironment(); e.reset('easy'); print('openenv-ready')"]

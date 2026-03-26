@@ -11,7 +11,7 @@ Operations teams receive high volumes of billing, technical, and security emails
 - close only when policy requirements are met
 
 ## Environment API
-The environment class is `EmailTriageEnvironment` in `/home/runner/work/Meta__demo/Meta__demo/env/environment.py`.
+The environment class is `EmailTriageEnvironment` in `env/environment.py`.
 
 Supported methods:
 - `reset(task_name="easy")`
@@ -64,7 +64,7 @@ print(reward, done, info)
 ```
 
 ## Baseline agent
-Baseline runner in `/home/runner/work/Meta__demo/Meta__demo/scripts/run_baseline.py`:
+Baseline runner in `scripts/run_baseline.py`:
 - Reads `OPENAI_API_KEY`
 - Verifies OpenAI access
 - Runs deterministic task policy across all tasks
@@ -80,5 +80,5 @@ python scripts/run_baseline.py
 Build and run:
 ```bash
 docker build -t openenv-email-triage .
-docker run --rm -e OPENAI_API_KEY=$OPENAI_API_KEY openenv-email-triage
+docker run --rm openenv-email-triage
 ```
