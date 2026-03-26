@@ -1,0 +1,12 @@
+name: email-triage-openenv
+version: 1.0.0
+environment:
+  module: env.environment
+  class: EmailTriageEnvironment
+tasks:
+  - easy
+  - medium
+  - hard
+grader:
+  module: grader.grader
+  function: score_task
